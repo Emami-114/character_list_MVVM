@@ -28,5 +28,5 @@ object ApiClient {
 
     interface ApiService {
         @GET("character")
-        fun fetchCaracter(@Query("page") page:String):Call<CharacterList>
+        fun fetchCaracter(@Query("page") page:Int):Call<CharacterList>
     }

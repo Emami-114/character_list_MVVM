@@ -1,5 +1,6 @@
 package com.example.profile_list_mvvm
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,7 @@ class MainAdapter(val characterList: List<CharacterList.Result>) : RecyclerView.
 
     inner class MainViewHolder(val binding: ItemListBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(charakter: CharacterList.Result){
+            Log.d("MYTAG",charakter.name)
             binding.apply {
                 textView.text = charakter.name
                 imageShape.load(charakter.image){
